@@ -20,6 +20,10 @@ frontend/yarn-error.log*
 backend/breed_model.h5
 backend/disease_model.h5
 
+# Datasets (Not needed for production)
+dataset_breed/
+dataset_disease/
+
 # Misc
 .vscode/
 .DS_Store
