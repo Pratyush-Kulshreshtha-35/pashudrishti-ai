@@ -1,0 +1,26 @@
+# Python
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+
+# Node / React
+frontend/node_modules/
+frontend/build/
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Large Models (Handled by LFS)
+backend/breed_model.h5
+backend/disease_model.h5
+
+# Misc
+.vscode/
+.DS_Store
+*.log

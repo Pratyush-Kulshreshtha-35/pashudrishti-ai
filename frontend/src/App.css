@@ -1,0 +1,296 @@
+.app-dashboard {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 290px minmax(0, 1fr);
+  background:
+    radial-gradient(circle at 82% 8%, rgba(48, 139, 92, 0.16), transparent 28%),
+    linear-gradient(135deg, #f5faf6 0%, #edf6f0 45%, #f8fbf8 100%);
+  color: #10231b;
+}
+
+.app-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 28px;
+  background:
+    linear-gradient(180deg, rgba(11, 55, 41, 0.96), rgba(15, 82, 63, 0.94)),
+    url("https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?auto=format&fit=crop&w=900&q=80");
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.app-sidebar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 29, 22, 0.76), rgba(5, 29, 22, 0.9));
+}
+
+.app-sidebar > * {
+  position: relative;
+  z-index: 1;
+}
+
+.app-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.app-logo > img {
+  width: 220px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.app-logo strong,
+.app-logo small {
+  display: block;
+}
+
+.app-logo strong {
+  font-size: 18px;
+}
+
+.app-logo small {
+  margin-top: 3px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 12px;
+}
+
+.app-nav {
+  display: grid;
+  gap: 10px;
+}
+
+.nav-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.76);
+  cursor: pointer;
+  padding: 13px 14px;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 760;
+}
+
+.nav-item span {
+  width: 36px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #c7f2d4;
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+}
+
+.sidebar-card {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  flex: 0 0 auto;
+  margin-top: 6px;
+  border-radius: 999px;
+  background: #8df0a4;
+  box-shadow: 0 0 0 6px rgba(141, 240, 164, 0.14);
+}
+
+.sidebar-card strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.sidebar-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.app-main {
+  min-width: 0;
+  padding: 28px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.page-kicker {
+  margin: 0 0 6px;
+  color: #48745e;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.app-header h1 {
+  margin: 0;
+  color: #10231b;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.05;
+}
+
+.logout-button {
+  border: 1px solid #c9dacd;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1f5c43;
+  cursor: pointer;
+  padding: 12px 18px;
+  font-weight: 800;
+}
+
+.logout-button:hover {
+  border-color: #95bba4;
+  background: #f5fbf7;
+}
+
+.hero-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 22px;
+  padding: 22px;
+  border: 1px solid rgba(34, 91, 67, 0.12);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(232, 246, 237, 0.88)),
+    url("https://images.unsplash.com/photo-1484557985045-edf25e08da73?auto=format&fit=crop&w=1100&q=80");
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 18px 48px rgba(31, 92, 67, 0.11);
+  overflow: hidden;
+}
+
+.hero-strip > div:first-child span {
+  display: block;
+  margin-bottom: 7px;
+  color: #2f7b54;
+  font-size: 12px;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.hero-strip > div:first-child strong {
+  display: block;
+  max-width: 620px;
+  color: #10231b;
+  font-size: clamp(21px, 2.8vw, 34px);
+  line-height: 1.15;
+}
+
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(112px, 1fr));
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.hero-metrics div {
+  padding: 15px;
+  border: 1px solid rgba(34, 91, 67, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.hero-metrics strong,
+.hero-metrics span {
+  display: block;
+}
+
+.hero-metrics strong {
+  margin-bottom: 2px;
+  color: #144f39;
+  font-size: 20px;
+}
+
+.hero-metrics span {
+  color: #587568;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.workspace-panel {
+  min-height: 520px;
+  border: 1px solid rgba(34, 91, 67, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 48px rgba(31, 92, 67, 0.1);
+  overflow: hidden;
+}
+
+@media (max-width: 920px) {
+  .app-dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .app-sidebar {
+    position: static;
+    height: auto;
+    padding: 18px;
+  }
+
+  .app-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sidebar-card {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .app-main {
+    padding: 18px;
+  }
+
+  .app-header,
+  .hero-strip {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .logout-button {
+    width: 100%;
+  }
+
+  .hero-metrics,
+  .app-nav {
+    grid-template-columns: 1fr;
+  }
+}
