@@ -13,6 +13,10 @@ app_port: 7860
 
 ![PashuDrishti Banner](https://img.shields.io/badge/PashuDrishti-AI-green?style=for-the-badge&logo=probot)
 
+## 🌐 Live Demo
+
+**Try it out here:** [https://pashudrishti-ai.netlify.app/](https://pashudrishti-ai.netlify.app/)
+
 ## 🌟 Key Features
 
 - **📸 AI Image Analysis**: Instantly detect livestock breeds and identify visible signals of diseases (like Lumpy Skin Disease, etc.).
