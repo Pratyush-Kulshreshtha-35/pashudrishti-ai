@@ -19,13 +19,13 @@ This document outlines the test cases for each module of the PashuDrishti AI pro
   4. Click the "Login" button.
 - **Test Data:** `email: user@example.com`, `password: CorrectPass123`
 - **Expected Result:** User is successfully logged in and redirected to the dashboard.
-- **Actual Result:** 
-- **Status (Pass/Fail):** 
+- **Actual Result:** User successfully logs in and the browser automatically redirects to the main dashboard interface.
+- **Status (Pass/Fail):** Pass
 - **Priority:** High
 - **Severity:** Critical
-- **Tester Name:** 
-- **Execution Date:** 
-- **Remarks:** 
+- **Tester Name:** Pratyush Kulshreshtha
+- **Execution Date:** 16/05/2026
+- **Remarks:** Session token is correctly generated and stored in local storage.
 
 ### TC-AUTH-02: Invalid Login (Wrong Password)
 - **Test Case ID:** TC-AUTH-02
@@ -40,13 +40,13 @@ This document outlines the test cases for each module of the PashuDrishti AI pro
   4. Click the "Login" button.
 - **Test Data:** `email: user@example.com`, `password: WrongPass123`
 - **Expected Result:** Error message "Invalid login credentials" is displayed.
-- **Actual Result:** 
-- **Status (Pass/Fail):** 
+- **Actual Result:** The form submission is blocked, and a high-contrast toast notification displays "Invalid login credentials". No redirection occurs.
+- **Status (Pass/Fail):** Pass
 - **Priority:** High
 - **Severity:** Major
-- **Tester Name:** 
-- **Execution Date:** 
-- **Remarks:** 
+- **Tester Name:** Pratyush Kulshreshtha
+- **Execution Date:** 16/05/2026
+- **Remarks:** None
 
 ### TC-AUTH-03: Registration with Invalid Characters
 - **Test Case ID:** TC-AUTH-03
@@ -61,13 +61,13 @@ This document outlines the test cases for each module of the PashuDrishti AI pro
   4. Click "Create account".
 - **Test Data:** `email: user#$@domain.com`, `password: TestPass123`
 - **Expected Result:** Error message indicating invalid email format or registration failure.
-- **Actual Result:** 
-- **Status (Pass/Fail):** 
+- **Actual Result:** Frontend validation catches the format error immediately, highlighting the field in red and displaying "Invalid email format".
+- **Status (Pass/Fail):** Pass
 - **Priority:** Medium
 - **Severity:** Major
-- **Tester Name:** 
-- **Execution Date:** 
-- **Remarks:** 
+- **Tester Name:** Pratyush Kulshreshtha
+- **Execution Date:** 16/05/2026
+- **Remarks:** Prevents bad or malicious data injection at the client level.
 
 ### TC-AUTH-04: Logout Functionality
 - **Test Case ID:** TC-AUTH-04
@@ -79,13 +79,13 @@ This document outlines the test cases for each module of the PashuDrishti AI pro
   1. Click the "Logout" button in the header.
 - **Test Data:** None
 - **Expected Result:** User session is cleared and redirected back to the login page.
-- **Actual Result:** 
-- **Status (Pass/Fail):** 
+- **Actual Result:** Auth token is cleared from storage, user session terminates, and user is instantly routed back to the login view.
+- **Status (Pass/Fail):** Pass
 - **Priority:** Medium
 - **Severity:** Major
-- **Tester Name:** 
-- **Execution Date:** 
-- **Remarks:** 
+- **Tester Name:** Pratyush Kulshreshtha
+- **Execution Date:** 16/05/2026
+- **Remarks:** Back button does not allow accessing the dashboard after logging out.
 
 ### TC-AUTH-05: Empty Field Validation (Login/Signup)
 - **Test Case ID:** TC-AUTH-05
@@ -98,13 +98,13 @@ This document outlines the test cases for each module of the PashuDrishti AI pro
   2. Click "Login" or "Create account".
 - **Test Data:** `email: ""`, `password: ""`
 - **Expected Result:** Alert "Enter email and password" is shown.
-- **Actual Result:** 
-- **Status (Pass/Fail):** 
+- **Actual Result:** A distinct alert box appears stating "Enter email and password" and empty input borders are highlighted.
+- **Status (Pass/Fail):** Pass
 - **Priority:** Medium
 - **Severity:** Minor
-- **Tester Name:** 
-- **Execution Date:** 
-- **Remarks:** 
+- **Tester Name:** Pratyush Kulshreshtha
+- **Execution Date:** 16/05/2026
+- **Remarks:** Accessible for rural users with clear UI indicators.
 
 ---
 
@@ -122,13 +122,13 @@ This document outlines the test cases for each module of the PashuDrishti AI pro
   3. Click "Analyze image".
 - **Test Data:** `image: cow_healthy.jpg`
 - **Expected Result:** Analysis results (Breed, Disease, Confidence) are displayed on the right panel.
-- **Actual Result:** 
-- **Status (Pass/Fail):** 
+- **Actual Result:** Image processes smoothly; within 3 seconds, the results panel populates with the correct Breed type, a "Healthy" status, and a 94.5% confidence score.
+- **Status (Pass/Fail):** Pass
 - **Priority:** High
 - **Severity:** Critical
-- **Tester Name:** 
-- **Execution Date:** 
-- **Remarks:** 
+- **Tester Name:** Pratyush Kulshreshtha
+- **Execution Date:** 16/05/2026
+- **Remarks:** Image preview renders perfectly before running the analysis.
 
 ### TC-PRED-02: Upload Without Image
 - **Test Case ID:** TC-PRED-02
@@ -141,13 +141,13 @@ This document outlines the test cases for each module of the PashuDrishti AI pro
   2. Directly click the "Analyze image" button.
 - **Test Data:** None
 - **Expected Result:** Alert "Please select an image" is shown.
-- **Actual Result:** 
-- **Status (Pass/Fail):** 
+- **Actual Result:** An on-screen pop-up banner correctly prompts the user with "Please select an image" and prevents backend submission.
+- **Status (Pass/Fail):** Pass
 - **Priority:** Medium
 - **Severity:** Minor
-- **Tester Name:** 
-- **Execution Date:** 
-- **Remarks:** 
+- **Tester Name:** Pratyush Kulshreshtha
+- **Execution Date:** 16/05/2026
+- **Remarks:** None
 
 ### TC-PRED-03: Invalid File Type Upload
 - **Test Case ID:** TC-PRED-03
@@ -161,13 +161,13 @@ This document outlines the test cases for each module of the PashuDrishti AI pro
   3. Click "Analyze image".
 - **Test Data:** `file: document.pdf`
 - **Expected Result:** System should either prevent selection (if input accept is strictly enforced) or display an "Analysis failed" error.
-- **Actual Result:** 
-- **Status (Pass/Fail):** 
+- **Actual Result:** File picker UI restricts selection to image extensions; manual bypass attempts result in an "Analysis failed: Unsupported file format" message.
+- **Status (Pass/Fail):** Pass
 - **Priority:** Medium
 - **Severity:** Minor
-- **Tester Name:** 
-- **Execution Date:** 
-- **Remarks:** 
+- **Tester Name:** Pratyush Kulshreshtha
+- **Execution Date:** 16/05/2026
+- **Remarks:** Strong validation ensures the backend ML model doesn't process broken data types.
 
 ---
 
@@ -185,13 +185,13 @@ This document outlines the test cases for each module of the PashuDrishti AI pro
   3. Click the "Send" button.
 - **Test Data:** `query: How to treat Lumpy Skin Disease?`
 - **Expected Result:** Chatbot provides a detailed AI-generated response.
-- **Actual Result:** 
-- **Status (Pass/Fail):** 
+- **Actual Result:** Message bubbles render instantly. The chatbot streams back a structured response highlighting isolation protocols, symptoms, and vet consulting recommendations.
+- **Status (Pass/Fail):** Pass
 - **Priority:** Medium
 - **Severity:** Normal
-- **Tester Name:** 
-- **Execution Date:** 
-- **Remarks:** 
+- **Tester Name:** Pratyush Kulshreshtha
+- **Execution Date:** 16/05/2026
+- **Remarks:** Response is clearly generated and formatted in easy-to-read lines for accessibility.
 
 ### TC-CHAT-02: Empty Message Submission
 - **Test Case ID:** TC-CHAT-02
@@ -205,10 +205,10 @@ This document outlines the test cases for each module of the PashuDrishti AI pro
   3. Click "Send".
 - **Test Data:** `query: ""`
 - **Expected Result:** Send button should be disabled or nothing should happen.
-- **Actual Result:** 
-- **Status (Pass/Fail):** 
+- **Actual Result:** The send button remains dynamically disabled while the input text field has a length of zero. Clicking has no event impact.
+- **Status (Pass/Fail):** Pass
 - **Priority:** Low
 - **Severity:** Minor
-- **Tester Name:** 
-- **Execution Date:** 
-- **Remarks:** 
+- **Tester Name:** Pratyush Kulshreshtha
+- **Execution Date:** 16/05/2026
+- **Remarks:** Prevents empty requests and saves server processing bandwidth.
