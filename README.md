@@ -1,12 +1,3 @@
----
-title: PashuDrishti AI
-emoji: 🐄
-colorFrom: green
-colorTo: blue
-sdk: docker
-app_port: 7860
----
-
 # PashuDrishti AI 🐄
 
 **PashuDrishti AI** is an advanced livestock health intelligence platform designed to empower farmers and veterinarians. Using cutting-edge computer vision and natural language processing, it provides instant screening for livestock breeds and potential diseases from simple photographs.
