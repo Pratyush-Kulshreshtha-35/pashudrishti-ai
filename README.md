@@ -78,4 +78,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-*Developed with ❤️ for the farming community.*
+*Developed with ❤️ for the farming community by **Pratyush Kulshreshtha**.*
